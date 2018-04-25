@@ -2,6 +2,8 @@ const _express = require('express')
 
 var app = _express()
 
+app.use(express.static(__dirname + '/public'))
+
 app.get('/', (req, resp) => {
     resp.send({
         nome : 'Robson',
