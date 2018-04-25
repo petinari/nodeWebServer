@@ -8,7 +8,7 @@ app.get('/', (req, resp) => {
         likes : [
             'Moto',
             'Comida',
-            'Dinheiro'
+            
         ]
     })
 })
