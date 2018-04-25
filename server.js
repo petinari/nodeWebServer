@@ -1,5 +1,5 @@
 const _express = require('express')
-const _hbs = require('hbs');
+// const _hbs = require('hbs');
 
 var app = _express()
 
@@ -8,13 +8,10 @@ app.set('view engine', 'hbs')
 app.use(_express.static(__dirname + '/public'))
 
 app.get('/', (req, resp) => {
-    resp.send({
-        nome : 'Robson',
-        likes : [
-            'Moto',
-            'Comida',
-            
-        ]
+    resp.render('home.hbs', {
+        welcomeMessage: 'Welcome to some website',
+        pageTitle: 'Home Page',
+        currentYear: new Date().getFullYear()
     })
 })
 
